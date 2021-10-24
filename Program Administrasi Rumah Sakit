@@ -1,0 +1,188 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+struct biodata
+{
+ char nama[30], alamat[20], penyakit[20], jnskelamin[10], lagi, bpjs[1];
+ int dokter, umur, hp, lama, kamar, harga, jasa, dibayar;
+ int posisi;
+} pasien[20], wali[20], kamar[20], dokter[20], letak;
+int main ()
+{
+ int a;
+ awal:
+ a=letak.posisi;
+ 
+ cout<<"\t\t\t\t\t\t ______________________________________________\n";
+ cout<<"\t\t\t\t\t\t|SELAMAT DATANG DI RUMAH SAKIT BINA MEDIKA    |\n";
+ cout<<"\t\t\t\t\t\t|_____________________________________________|\n";
+ 
+ cout<<"MASUKKAN DATA PASIEN : \n";
+ 
+    cout<<"\tMasukkan Nama       = "; cin>>pasien[a].nama;
+    cout<<endl;
+    cout<<"\tMasukkan Alamat     = "; cin>>pasien[a].alamat;
+    cout<<endl;
+    cout<<"\tJenis Kelamin[p/l]  = "; cin>>pasien[a].jnskelamin;
+    cout<<endl;
+    cout<<"\tLama Menginap       = "; cin>>pasien[a].lama;
+    cout<<endl;
+ system("cls");
+ 
+ cout<<"\t\t\t\t\t\t MASUKKAN DATA WALI : \n";
+ 
+    cout<<"\tMasukkan Nama        ="; cin>>wali[a].nama;
+    cout<<endl;
+    cout<<"\tMasukkan Alamat      ="; cin>>wali[a].alamat;
+    cout<<endl;
+    cout<<"\tJenis Kelamin[p/l]   ="; cin>>wali[a].jnskelamin;
+    cout<<endl;
+    cout<<"\tUmur                 = "; cin>>wali[a].umur;
+    cout<<endl; 
+    cout<<"\tNo. Hp               = "; cin>>wali[a].hp;
+    cout<<endl; 
+    system("cls");
+ 
+ 
+     cout<<"\t\t\t\t\t\t MASUKKAN PILIHAN KAMAR RS : \n";
+ 
+    cout<<"\t Jenis Kamar: "<<endl;
+    cout<<"\t 1.Kelas I   "<<endl;
+    cout<<"\t 2.Kelas II  "<<endl;
+    cout<<"\t 3.Kelas III "<<endl;
+    cout<<"\t 4.Kelas VIP "<<endl;
+    cout<<"\t 5.Kelas VVIP"<<endl;
+    cout<<"\tPilih Jenis Kamar Anda[1-5] =";
+    cin>>pasien[a].kamar;
+
+     switch(pasien[a].kamar)
+     {
+     case 1:
+      pasien[a].harga=800000;
+      cout<<"\tKelas I =Tarif 800000"<<endl;
+      break;
+
+      case 2:
+      pasien[a].harga=600000;
+      cout<<"\tKelas II"<<endl;
+      cout<<"\tTarif 800000"<<endl;
+      break;
+
+      case 3:
+      pasien[a].harga=300000;
+      cout<<"\tKelas III"<<endl;
+      cout<<"\tTarif 800000"<<endl;
+      break;
+
+     case 4:
+      pasien[a].harga=800000;
+      cout<<"\tKelas VIP"<<endl;
+      cout<<"\tTarif 1300000"<<endl;
+      break;
+
+     case 5:
+      pasien[a].harga=1500000;
+      cout<<"\tKelas VVIP"<<endl;
+      cout<<"\tTarif 150000"<<endl;
+      break;
+
+     default:
+     cout<<"Tidak Tersedia";
+    }
+        cout<<endl;
+        system("pause");
+     system("cls");
+     
+    cout<<"\t\t\t\t\t\t MASUKKAN PILIHAN DOKTER : \n";
+        cout<<"\t\t\t\t\t 1.Dokter Anak"<<endl;
+        cout<<"\t\t\t\t\t 2.Dokter Penyakit Dalam"<<endl;
+        cout<<"\t\t\t\t\t 3.Dokter THT"<<endl;
+        cout<<"\t\t\t\t\t 4.Dokter Bedah"<<endl;
+        cout<<"\t\t\t\t\t 5.Dokter Umum"<<endl;
+        cout<<"\t\t\t\t\t Masukkan Pilihan Anda[1-5] =";
+        cin>>pasien[a].dokter;
+
+    switch(pasien[a].dokter){
+     case 1:
+      dokter[a].jasa=70000;
+      
+      cout<<"\t\t\t\t\tDokter Anak"<<endl;
+      cout<<"\t\t\t\t\tTarif 70000"<<endl;
+      break;
+
+    case 2:
+      dokter[a].jasa=80000;
+      cout<<"\t\t\t\t\tDokter Penyakit Dalam"<<endl;
+      cout<<"\t\t\t\t\tTarif 80000"<<endl;
+      break;
+
+    case 3:
+      dokter[a].jasa=60000;
+       cout<<"\t\t\t\t\tDokter THT"<<endl;
+      cout<<"\t\t\t\t\tTarif 60000"<<endl;
+      break;
+
+    case 4:
+      dokter[a].jasa=100000;
+      cout<<"\t\t\t\t\tDokter Bedah"<<endl;
+      cout<<"\t\t\t\t\tTarif 100000"<<endl;
+      break;
+
+    case 5:
+      dokter[a].jasa=50000;
+       cout<<"\t\t\t\t\tDokter Umum"<<endl;
+      cout<<"\t\t\t\t\tTarif 50000"<<endl;
+      break;
+
+    default:
+        cout<<"Tidak Tersedia"<<endl;
+    }
+    
+    system("pause");
+ system("cls");
+ 
+
+ cout<<"\t\t\t\t\t\t  DATA PASIEN : \n";
+    cout<<"|Nama Anda            :     "<<pasien[a].nama<<endl;
+    cout<<"|Alamat Anda          :  "<<pasien[a].alamat<<endl;
+    cout<<"|Jenis Kelamin        :  "<<pasien[a].jnskelamin<<endl;
+    cout<<"|Lama Menginap        :  "<<pasien[a].lama<<endl;
+    cout<<"|Jenis Kamar          :  "<<pasien[a].kamar<<endl;
+    cout<<"|Dokter               :  "<<dokter[a].jasa<<endl; 
+    cout<<"Apakah anda mempunyai BPJS? (Y/N)= "; cin>>pasien[a].bpjs;
+ if((strcmp(pasien[a].bpjs, "y")==0) || (strcmp(pasien[a].bpjs,"Y")==0)){
+    cout<<"Yang Harus Dibayar   :"<<pasien[a].lama*pasien[a].harga+dokter[a].jasa-100000<<endl<<endl;
+    }
+    else if ((strcpy(pasien[a].bpjs,"n")==0) || (strcmp(pasien[a].bpjs,"N")==0)){
+    cout<<"Yang Harus Dibayar   :"<<pasien[a].lama*pasien[a].harga+dokter[a].jasa<<endl<<endl;
+    }
+ cout<<"Apakah Anda ingin menginput lagi? (Y/N)=";
+ cin>>pasien[a].lagi;
+ letak.posisi=a+1;
+    if(pasien[a].lagi=='y' || pasien[a].lagi=='Y'){
+     system("cls");
+        goto awal;
+    }
+    if(pasien[a].lagi=='n' || pasien[a].lagi=='N'){
+            system ("cls");
+ 
+  cout<<"\t\t\t\t\t\t  DATA PASIEN YANG TELAH DIINPUT: : \n";
+ cout<<"************************************************************************************************************************\n";
+ cout<<"No | Nama         | Alamat              | Jenis Kelamin | Lama Menginap      | Jenis Kamar   | Dokter     | Total Harga\n";
+ cout<<"************************************************************************************************************************\n";
+ for (int a=0; a<letak.posisi; a++)
+ {
+  cout<<" "<<a+1 <<" |"<<pasien[a].nama<<"\t""| "<<pasien[a].alamat<< "  \t""| "<<pasien[a].jnskelamin <<"   \t\t|"<<pasien[a].lama<<" \t ""\t| "<<pasien[a].kamar<<" \t ""\t| "<<pasien[a].dokter<<" \t ""\t| Rp. "<<pasien[a].lama*pasien[a].harga+dokter[a].jasa-100000<<endl<<endl;
+  cout<<"\n";
+ }
+ cout<<"\n\n";
+   system("pause");
+         goto selesai;}
+    selesai:
+        cout<<"Terima Kasih Atas Kunjungan Anda di Rumah Sakit Bina Medika"<<endl;
+        
+    system("cls");
+
+return 0;
+}
